@@ -6,6 +6,7 @@ import itemRouter from "./app/routes/item.routes.js";
 
 const app=express();
 dotenv.config();
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 

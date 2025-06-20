@@ -170,15 +170,14 @@ export default function AddItem() {
                 className="w-full"
                 required
               />
+              <FiUploadCloud className="text-2xl text-indigo-500" />
               {coverImage && (
                 <img
                   src={URL.createObjectURL(coverImage)}
                   alt="Preview"
-                  className="mt-3 h-24 w-24 object-cover rounded shadow"
+                  className="mt-3 h-20 object-cover rounded shadow"
                 />
               )}
-
-              <FiUploadCloud className="text-2xl text-indigo-500" />
             </div>
           </div>
 
