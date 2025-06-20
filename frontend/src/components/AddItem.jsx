@@ -187,9 +187,7 @@ export default function AddItem() {
             </label>
             <input
               type="file"
-              accept="image/*"
               multiple
-              capture='environment'
               onChange={handleAdditionalImages}
               className="w-full"
             />
