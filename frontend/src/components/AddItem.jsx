@@ -166,19 +166,20 @@ export default function AddItem() {
               <input
                 type="file"
                 accept="image/*"
+                capture='environment'
                 onChange={handleCoverImage}
                 className="w-full"
                 required
               />
               <FiUploadCloud className="text-2xl text-indigo-500" />
-              {coverImage && (
-                <img
-                  src={URL.createObjectURL(coverImage)}
-                  alt="Preview"
-                  className="mt-3 h-20 object-cover rounded shadow"
-                />
-              )}
             </div>
+            {coverImage && (
+              <img
+                src={URL.createObjectURL(coverImage)}
+                alt="Preview"
+                className="mt-3 h-20 object-cover rounded shadow"
+              />
+            )}
           </div>
 
           {/* Additional Images */}
@@ -190,6 +191,7 @@ export default function AddItem() {
               type="file"
               accept="image/*"
               multiple
+              capture='environment'
               onChange={handleAdditionalImages}
               className="w-full"
             />
@@ -213,8 +215,8 @@ export default function AddItem() {
               type="submit"
               disabled={loading}
               className={`w-full py-3 px-6 rounded-xl font-semibold text-white ${loading
-                  ? "bg-indigo-300 cursor-not-allowed"
-                  : "bg-indigo-600 hover:bg-indigo-700"
+                ? "bg-indigo-300 cursor-not-allowed"
+                : "bg-indigo-600 hover:bg-indigo-700"
                 } transition duration-300`}
             >
               {loading ? "Adding Item..." : "Add Item"}
