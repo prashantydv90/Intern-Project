@@ -165,8 +165,6 @@ export default function AddItem() {
             <div className="flex items-center gap-3">
               <input
                 type="file"
-                accept="image/*"
-                capture='environment'
                 onChange={handleCoverImage}
                 className="w-full"
                 required
