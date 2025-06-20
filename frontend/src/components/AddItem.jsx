@@ -43,7 +43,7 @@ export default function AddItem() {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/additem", data, {
+      await axios.post("https://intern-project-zqz6.onrender.com/api/additem", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

@@ -16,7 +16,7 @@ export default function ViewItems() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/getallitem")
+      .get("https://intern-project-zqz6.onrender.com/api/getallitem")
       .then((res) => {
         console.log(res.data)
         setItems(res.data.items)
@@ -37,7 +37,7 @@ export default function ViewItems() {
   const handleEnquire = async (item) => {
     setEnquireLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/enquire", {
+      await axios.post("https://intern-project-zqz6.onrender.com/api/enquire", {
         itemName: item.itemName,
         itemType: item.itemType,
         description: item.description,
